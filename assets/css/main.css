@@ -2689,3 +2689,7 @@ section {
 .footer .footer-legal .credits a {
   color: var(--color-primary);
 }
+
+.color-white {
+  color: #fff;
+}
