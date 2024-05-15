@@ -934,6 +934,7 @@ section {
 .projects .portfolio-content img {
   transition: 0.3s;
   height: 225px;
+  width: 100%;
 }
 
 .projects .portfolio-content .portfolio-info {
