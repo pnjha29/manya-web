@@ -80,6 +80,17 @@ section {
   color: #2e3135;
 }
 
+@media (max-width: 767px) {
+  .hero h2 {
+    display: none;
+  }
+}
+
+.logo-img{
+  height: 300px;
+  width: 350px;
+}
+
 .section-header h2:before,
 .section-header h2:after {
   content: "";
