@@ -68,9 +68,9 @@
           
           emailjs.sendForm('service_a81spew', 'template_raxyw0e', this)
             .then(function() {
-              alert('Email sent successfully!');
+             // alert('Email sent successfully!');
               document.getElementsByClassName('sent-message')[0].style.display="block";
-              console.log('SUCCESS!', response.status, response.text);
+             // console.log('SUCCESS!', response.status, response.text);
             }, function(error) {
               console.log('FAILED...', error);
               alert('Failed to send email. Please try again later.');
