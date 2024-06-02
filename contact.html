@@ -43,25 +43,7 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
 
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script type="text/javascript">
-  (function(){
-    emailjs.init("MaanyaVentures");
-  })();
-
-  window.onload = function() {
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      
-      emailjs.sendForm('service_a81spew', 'template_raxyw0e', this)
-        .then(function() {
-          alert('Email sent successfully!');
-        }, function(error) {
-          alert('Failed to send email. Please try again later.');
-        });
-    });
-  }
-</script>
+   
 
     <!-- =======================================================
   * Template Name: UpConstruction - v1.3.0
@@ -69,9 +51,30 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init("maanyaventures@gmail.com");
+    })();
+    </script>
   </head>
 
   <body>
+   <script>
+    
+      window.onload = function() {
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+          
+          emailjs.sendForm('service_a81spew', 'template_raxyw0e', this)
+            .then(function() {
+              alert('Email sent successfully!');
+            }, function(error) {
+              alert('Failed to send email. Please try again later.');
+            });
+        });
+      }
+    </script>
     <!-- ======= Header ======= -->
     <header id="header" class="header d-flex align-items-center">
       <div
@@ -169,7 +172,6 @@
 
             <div class="col-lg-6">
               <form id="contact-form"
-                role="form"
                 class="php-email-form"
               >
                 <div class="row gy-4">
