@@ -69,6 +69,7 @@
           emailjs.sendForm('service_a81spew', 'template_raxyw0e', this)
             .then(function() {
               alert('Email sent successfully!');
+              document.getElementsByClassName('.sent-message').style.display="block";
               console.log('SUCCESS!', response.status, response.text);
             }, function(error) {
               console.log('FAILED...', error);
@@ -173,9 +174,7 @@
             <!-- End Google Maps -->
 
             <div class="col-lg-6">
-              <form id="contact-form"
-                class="php-email-form"
-              >
+              <form id="contact-form">
                 <div class="row gy-4">
                   <div class="col-lg-6 form-group">
                     <input
@@ -219,7 +218,6 @@
                 </div>
                 <div class="my-3">
                   <div class="loading">Loading</div>
-                  <div class="error-message"></div>
                   <div class="sent-message">
                     Your message has been sent. Thank you!
                   </div>
