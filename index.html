@@ -61,7 +61,7 @@
     <script>
     
       window.onload = function() {
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
+        document.getElementById('quote-form').addEventListener('submit', function(event) {
           event.preventDefault();
           
           emailjs.sendForm('service_a81spew', 'template_ahgdpai', this)
@@ -1130,7 +1130,7 @@
             </div>
 
             <div class="col-lg-5" data-aos="fade">
-              <form
+              <form id="quote-form"
                 class="php1-email-form"
               >
                 <h3>Get a quote</h3>
