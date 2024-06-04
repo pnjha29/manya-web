@@ -8,6 +8,7 @@
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
+
     <!-- Favicons -->
   <link href="assets/img/maanya-logo.png" rel="icon">
   <link href="assets/img/maanya-logo.png" rel="apple-touch-icon">
@@ -49,9 +50,97 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init("X--WuJSN8HPmRe-GF");
+    })();
+    </script>
   </head>
 
   <body>
+    <script>
+    
+      window.onload = function() {
+        document.getElementById('brochure-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+          
+          emailjs.sendForm('service_a81spew', 'template_raxyw0e', this)
+            .then(function() {
+              // Create an anchor element
+              var link = document.createElement('a');
+              link.href = 'assets/maanya_tulip.pdf'; // Replace with the path to your PDF file
+              link.download = 'assets/maanya_tulip.pdf'; // Replace with the desired file name
+
+              // Append the anchor to the body
+              document.body.appendChild(link);
+
+              // Programmatically click the anchor
+              link.click();
+
+              // Remove the anchor from the document
+              document.body.removeChild(link);
+              // Close the Bootstrap modal
+              var myModal = bootstrap.Modal.getInstance(document.getElementById('exampleModal')); // Replace 'myModal' with the ID of your modal
+                      myModal.hide();
+             // console.log('SUCCESS!', response.status, response.text);
+            }, function(error) {
+              console.log('FAILED...', error);
+              alert('Failed to send email. Please try again later.');
+            });
+        });
+      }
+    </script>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Please enter your details to download brochure</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="brochure-form" class="php1-email-form">
+              <div class="row gy-4">
+                <div class="col-lg-6 form-group">
+                  <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      id="name"
+                      placeholder="Your Name"
+                      required
+                    />
+                </div>
+                <div class="col-lg-6 form-group">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    name="phone"
+                    id="phone"
+                    placeholder="Your Phone Number"
+                    pattern="[0-9]{10}"
+                    oninvalid="setCustomValidity('Please enter a valid 10-digit phone number.')"
+                    required
+                  />
+                </div>
+                <div class="col-lg-12 form-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    id="email"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
+              </div>              
+              <button type="submit" class="btn btn-primary float-end mt-4">Download</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- ======= Header ======= -->
     <header id="header" class="header d-flex align-items-center">
       <div
@@ -122,6 +211,10 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
           </div>
+
+          <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Launch demo modal
+          </button>           -->
 
           <div class="row justify-content-between gy-4 mt-4">
             <div class="col-lg-8">
@@ -203,6 +296,7 @@
                   <a
                     href="assets/img/samplePDF.pdf"
                     download
+                    type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
                     class="btn-visit align-self-start"
                     >Download brochure</a
                   >
@@ -229,29 +323,20 @@
                   ndiranagar, Bangalore – 560 038.<br /><br />
                   <strong>Mob:</strong> +91 88808 45621<br />
                   <strong>Tel:</strong> 080 - 2526 9119<br />
-                  <strong>Email:</strong> maanyaventures@gmail.com<br />
+                  <strong>Email:</strong> sales@maanyaventures.com<br />
                 </p>
-                <div class="social-links d-flex mt-3">
+                <div class="social-links d-flex mt-3">                  
                   <a
-                    href="#"
+                    href="https://www.facebook.com/profile.php?id=61559555138668"
                     class="d-flex align-items-center justify-content-center"
-                    ><i class="bi bi-twitter"></i
-                  ></a>
-                  <a
-                    href="#"
-                    class="d-flex align-items-center justify-content-center"
+                    target="_blank"
                     ><i class="bi bi-facebook"></i
                   ></a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/maanyaventures_official/"
                     class="d-flex align-items-center justify-content-center"
                     ><i class="bi bi-instagram"></i
-                  ></a>
-                  <a
-                    href="#"
-                    class="d-flex align-items-center justify-content-center"
-                    ><i class="bi bi-linkedin"></i
-                  ></a>
+                  ></a>                  
                 </div>
               </div>
             </div>
