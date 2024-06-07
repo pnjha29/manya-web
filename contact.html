@@ -51,18 +51,18 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script type="text/javascript">
+ <!-- <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
     (function(){
       emailjs.init("X--WuJSN8HPmRe-GF");
     })();
-    </script>
+    </script> -->
   </head>
 
   <body>
-   <script>
+<!--   <script>
     
-      window.onload = function() {
+     window.onload = function() {
         document.getElementById('contact-form').addEventListener('submit', function(event) {
           event.preventDefault();
           
@@ -77,7 +77,7 @@
             });
         });
       }
-    </script>
+    </script> -->
     <!-- ======= Header ======= -->
     <header id="header" class="header d-flex align-items-center">
       <div
@@ -174,7 +174,11 @@
             <!-- End Google Maps -->
 
             <div class="col-lg-6">
-              <form id="contact-form" class="php1-email-form">
+              <form id="contact-form" 
+              action="forms/contact.php"
+              method="post"
+              role="form"
+              class="php1-email-form">
                 <div class="row gy-4">
                   <div class="col-lg-6 form-group">
                     <input
