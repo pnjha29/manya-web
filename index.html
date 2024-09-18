@@ -42,6 +42,7 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
+    <link href="assets/css/popup.css" rel="stylesheet" />
 
     <!-- =======================================================
   * Template Name: UpConstruction - v1.3.0
@@ -49,49 +50,117 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script type="text/javascript">
-    (function(){
-      emailjs.init("X--WuJSN8HPmRe-GF");
-    })();
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("X--WuJSN8HPmRe-GF");
+      })();
     </script>
-       <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '844946487449916');
-    fbq('track', 'PageView');
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "844946487449916");
+      fbq("track", "PageView");
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=844946487449916&ev=PageView&noscript=1"
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=844946487449916&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16697902457">
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-16697902457');
+    </script>
   </head>
 
   <body>
     <script>
-    
-      window.onload = function() {
-        document.getElementById('quote-form').addEventListener('submit', function(event) {
-          event.preventDefault();
-          
-          emailjs.sendForm('service_a81spew', 'template_ahgdpai', this)
-            .then(function() {
-             // alert('Email sent successfully!');
-              document.getElementsByClassName('sent-message')[0].style.display="block";
-             // console.log('SUCCESS!', response.status, response.text);
-            }, function(error) {
-              console.log('FAILED...', error);
-              alert('Failed to send email. Please try again later.');
-            });
-        });
+      window.onload = function () {
+        document
+          .getElementById("quote-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            emailjs.sendForm("service_a81spew", "template_ahgdpai", this).then(
+              function () {
+                // alert('Email sent successfully!');
+                document.getElementsByClassName(
+                  "sent-message"
+                )[0].style.display = "block";
+                // console.log('SUCCESS!', response.status, response.text);
+              },
+              function (error) {
+                console.log("FAILED...", error);
+                alert("Failed to send email. Please try again later.");
+              }
+            );
+          });
+      };
+
+      window.onload = function () {
+        document
+          .getElementById("popup-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            emailjs.sendForm("service_a81spew", "template_ahgdpai", this).then(
+              function () {
+                // alert('Email sent successfully!');
+                console.log("successful");
+                // document.getElementsByClassName(
+                //   "sent-message"
+                // )[0].style.display = "block";
+                // console.log('SUCCESS!', response.status, response.text);
+              },
+              function (error) {
+                console.log("FAILED...", error);
+                alert("Failed to send email. Please try again later.");
+              }
+            );
+          });
+      };
+
+      // Function to show the popup
+      function showPopup() {
+        document.getElementById("popup").style.display = "block";
       }
+
+      // Example: Show the popup after 3 seconds
+      setTimeout(showPopup, 3000);
     </script>
     <!-- ======= Header ======= -->
     <header id="header" class="header d-flex align-items-center">
@@ -939,7 +1008,9 @@
                   <div class="col-xl-5">
                     <div
                       class="card-bg"
-                      style="background-image: url(assets/img/water_harvest.jpeg)"
+                      style="
+                        background-image: url(assets/img/water_harvest.jpeg);
+                      "
                     ></div>
                   </div>
                   <div class="col-xl-7 d-flex align-items-center">
@@ -1147,9 +1218,7 @@
             </div>
 
             <div class="col-lg-5" data-aos="fade">
-              <form id="quote-form"
-                class="php1-email-form"
-              >
+              <form id="quote-form" class="php1-email-form">
                 <h3>Get a quote</h3>
                 <p>
                   Request a Quote: Unlock Competitive Pricing and Superior
@@ -1611,16 +1680,16 @@
                 </p>
                 <div class="social-links d-flex mt-3">
                   <a
-                  href="https://www.facebook.com/profile.php?id=61559555138668"
-                  class="d-flex align-items-center justify-content-center"
-                  target="_blank"
-                  ><i class="bi bi-facebook"></i
-                ></a>
-                <a
-                  href="https://www.instagram.com/maanyaventures_official/"
-                  class="d-flex align-items-center justify-content-center"
-                  ><i class="bi bi-instagram"></i
-                ></a>   
+                    href="https://www.facebook.com/profile.php?id=61559555138668"
+                    class="d-flex align-items-center justify-content-center"
+                    target="_blank"
+                    ><i class="bi bi-facebook"></i
+                  ></a>
+                  <a
+                    href="https://www.instagram.com/maanyaventures_official/"
+                    class="d-flex align-items-center justify-content-center"
+                    ><i class="bi bi-instagram"></i
+                  ></a>
                 </div>
               </div>
             </div>
@@ -1672,11 +1741,35 @@
             <strong><span>Maanya Ventures & Developers</span></strong
             >. All Rights Reserved
           </div>
-          
         </div>
       </div>
     </footer>
     <!-- End Footer -->
+
+    <div class="popup" id="popup">
+      <div class="popup-header">Find Your Dream Property</div>
+      <span class="close-btn" id="close-btn">&times;</span>
+      <div class="popup-content">
+        <div class="popup-form">
+          <form id="popup-form">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="email"              
+              placeholder="Your Email"
+              required
+            />
+            <input
+              type="tel"
+              name="phone"              
+              placeholder="Your Phone Number"
+              required
+            />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <a
       href="#"
@@ -1697,5 +1790,13 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          document.getElementById('close-btn').addEventListener('click', function() {
+              document.getElementById('popup').style.display = 'none';
+          });
+      });
+  </script>
   </body>
 </html>

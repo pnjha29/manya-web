@@ -1,0 +1,80 @@
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 700px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    display: none;
+    z-index: 1000;
+    border-radius: 10px;
+    /* height: 75%; */
+}
+
+.popup-header {
+    background-color: #004d40;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.popup-content img {
+    width: 50%;
+    height: auto;
+}
+
+.popup-form {
+    /* width: 50%; */
+    /* padding: 20px; */
+}
+
+.popup-form input[type="text"], .popup-form input[type="email"], .popup-form input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popup-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #004d40;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-form button:hover {
+    background-color: #00332e;
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .popup-content {
+        flex-direction: column;
+    }
+
+    .popup-content img, .popup-form {
+        width: 100%;
+    }
+}
