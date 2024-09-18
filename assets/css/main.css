@@ -60,9 +60,10 @@ h6 {
 # Sections & Section Header
 --------------------------------------------------------------*/
 section {
-  padding: 80px 0;
+  padding: 35px 0;
   overflow: hidden;
 }
+
 
 .section-bg {
   background-color: #f5f6f7;
@@ -268,11 +269,16 @@ section {
 --------------------------------------------------------------*/
 .header {
   z-index: 997;
-  position: absolute;
-  padding: 30px 0;
+  /* position: absolute; */
+  padding: 15px 0 10px 0;
   top: 0;
   left: 0;
   right: 0;
+}
+
+.bi-list::before {
+  content: "\f479";
+  color: #ec9432;
 }
 
 .header .logo img {
@@ -326,7 +332,7 @@ section {
     font-family: var(--font-primary);
     font-size: 14px;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.6);
+    color: black;
     text-transform: uppercase;
     white-space: nowrap;
     transition: 0.3s;
@@ -364,7 +370,7 @@ section {
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: #fff;
+    color: black
   }
 
   .navbar .dropdown ul {
@@ -1892,13 +1898,15 @@ section {
   overflow: hidden;
   z-index: 1;
   transition-duration: 0.4s;
+  opacity: 1;
 }
 
 .hero .carousel-item::before {
   content: "";
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
-  inset: 0;
+  /* inset: 0;\ */
+  opacity: 1;
 }
 
 .hero .info {
@@ -2722,3 +2730,4 @@ section {
   border-radius: 0.375rem;
   opacity: 0.5;
 }
+

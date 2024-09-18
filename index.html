@@ -96,14 +96,18 @@
     /></noscript>
     <!-- End Meta Pixel Code -->
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16697902457">
-    </script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-16697902457"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'AW-16697902457');
+      gtag("config", "AW-16697902457");
     </script>
   </head>
 
@@ -177,10 +181,12 @@
         <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
         <nav id="navbar" class="navbar">
           <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li>
+              <a class="active" href="index.html" class="active">Home</a>
+            </li>
+            <li><a  href="about.html">About</a></li>
+            <li><a  href="projects.html">Projects</a></li>
+            <li><a  href="contact.html">Contact</a></li>
           </ul>
         </nav>
         <!-- .navbar -->
@@ -189,99 +195,32 @@
     <!-- End Header -->
 
     <!-- ======= Hero Section ======= -->
-    <section id="hero" class="hero">
-      <div class="info d-flex align-items-center">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-6 text-center">
-              <h2 data-aos="fade-down">
-                Welcome to <span>Maanya Ventures & Developers</span>
-              </h2>
-              <p data-aos="fade-up">
-                <!--Transforming landscapes, crafting lifestyles. Discover your plot of inspiration.-->
-                Imagine owning a piece of paradise where lush greenery, majestic
-                trees, and vibrant flora surround your plot of land. Our
-                exclusive development offers plots nestled in the lap of nature,
-                providing a serene and idyllic setting for your dream home. Each
-                plot is carefully selected to harmonize with the natural
-                environment, ensuring breathtaking views, fresh air, and a sense
-                of tranquility that only nature can provide.
-              </p>
-              <a
-                data-aos="fade-up"
-                data-aos-delay="200"
-                href="#get-started"
-                class="btn-get-started"
-                >Get A Quote</a
-              >
+
+    <section id="project-details" class="project-details">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="position-relative h-100">
+          <div class="slides-1 portfolio-details-slider swiper">
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/hero-carousel/maanya_banner_1.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/hero-carousel/maanya_banner_2.jpg"
+                  alt=""
+                />
+              </div>
             </div>
+            <div class="swiper-pagination"></div>
           </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </div>
-
-      <div
-        id="hero-carousel"
-        class="carousel slide"
-        data-bs-ride="carousel"
-        data-bs-interval="5000"
-      > 
-        <div
-          class="carousel-item active"
-          style="background-image: url(assets/img/hero-carousel/maanya_banner_1.jpg)"
-        ></div>
-        <div
-          class="carousel-item"
-          style="background-image: url(assets/img/hero-carousel/maanya_banner_2.jpg)"
-        ></div>
-        <div
-          class="carousel-item"
-          style="background-image: url(assets/img/hero-carousel/plot3.jpg)"
-        ></div>
-        <div
-          class="carousel-item"
-          style="background-image: url(assets/img/hero-carousel/plot2.jpg)"
-        ></div>
-
-        <a
-          class="carousel-control-prev"
-          href="#hero-carousel"
-          role="button"
-          data-bs-slide="prev"
-        >
-          <span
-            class="carousel-control-prev-icon bi bi-chevron-left"
-            aria-hidden="true"
-          ></span>
-        </a>
-
-        <a
-          class="carousel-control-next"
-          href="#hero-carousel"
-          role="button"
-          data-bs-slide="next"
-        >
-          <span
-            class="carousel-control-next-icon bi bi-chevron-right"
-            aria-hidden="true"
-          ></span>
-        </a>
-      </div>
-      <div
-        class="carousel-item"
-        style="background-image: url(assets/img/hero-carousel/plot1.jpg)"
-      ></div>
-      <div
-        class="carousel-item"
-        style="background-image: url(assets/img/hero-carousel/plot3.jpg)"
-      ></div>
-      <div
-        class="carousel-item"
-        style="background-image: url(assets/img/hero-carousel/plot2.jpg)"
-      ></div>
-      <div
-        class="carousel-item"
-        style="background-image: url(assets/img/breadcrumb.jpg)"
-      ></div>
     </section>
     <!-- End Hero Section -->
 
@@ -1755,17 +1694,17 @@
             <input type="text" name="name" placeholder="Your Name" required />
             <input
               type="email"
-              name="email"              
+              name="email"
               placeholder="Your Email"
               required
             />
             <input
               type="tel"
-              name="phone"              
+              name="phone"
               placeholder="Your Phone Number"
               required
             />
-            <button type="submit">Submit</button>
+            <button type="submit">Get a quote</button>
           </form>
         </div>
       </div>
@@ -1792,11 +1731,13 @@
     <script src="assets/js/main.js"></script>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-          document.getElementById('close-btn').addEventListener('click', function() {
-              document.getElementById('popup').style.display = 'none';
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("close-btn")
+          .addEventListener("click", function () {
+            document.getElementById("popup").style.display = "none";
           });
       });
-  </script>
+    </script>
   </body>
 </html>
