@@ -44,6 +44,9 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
 
+    <link href="assets/css/animated_btn.css" rel="stylesheet" />
+    <link href="assets/css/download-brochure.css" rel="stylesheet" />
+
     <!-- =======================================================
   * Template Name: UpConstruction - v1.3.0
   * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
@@ -97,24 +100,11 @@
         document.getElementById('brochure-form').addEventListener('submit', function(event) {
           event.preventDefault();
           
-          emailjs.sendForm('service_a81spew', 'template_raxyw0e', this)
-            .then(function() {
-              // Create an anchor element
-              var link = document.createElement('a');
-              link.href = 'assets/maanya_tulip.pdf'; // Replace with the path to your PDF file
-              link.download = 'assets/maanya_tulip.pdf'; // Replace with the desired file name
-
-              // Append the anchor to the body
-              document.body.appendChild(link);
-
-              // Programmatically click the anchor
-              link.click();
-
-              // Remove the anchor from the document
-              document.body.removeChild(link);
-              // Close the Bootstrap modal
-              var myModal = bootstrap.Modal.getInstance(document.getElementById('exampleModal')); // Replace 'myModal' with the ID of your modal
-                      myModal.hide();
+          emailjs.sendForm('service_a81spew', 'template_ahgdpai', this)
+            .then(function() {            
+              setTimeout(function() {
+                window.location.href = 'thank-you.html';
+              }, 2000);
              // console.log('SUCCESS!', response.status, response.text);
             }, function(error) {
               console.log('FAILED...', error);
@@ -122,57 +112,9 @@
             });
         });
       }
+     
     </script>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Please enter your details to download brochure</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form id="brochure-form" class="php1-email-form">
-              <div class="row gy-4">
-                <div class="col-lg-6 form-group">
-                  <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      id="name"
-                      placeholder="Your Name"
-                      required
-                    />
-                </div>
-                <div class="col-lg-6 form-group">
-                  <input
-                    type="tel"
-                    class="form-control"
-                    name="phone"
-                    id="phone"
-                    placeholder="Your Phone Number"
-                    pattern="[0-9]{10}"
-                    oninvalid="setCustomValidity('Please enter a valid 10-digit phone number.')"
-                    required
-                  />
-                </div>
-                <div class="col-lg-12 form-group">
-                  <input
-                    type="email"
-                    class="form-control"
-                    name="email"
-                    id="email"
-                    placeholder="Your Email"
-                    required
-                  />
-                </div>
-              </div>              
-              <button type="submit" class="btn btn-primary float-end mt-4" style="background-color: #004d40;">Download</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+  
     <!-- ======= Header ======= -->
     <header id="header" class="header d-flex align-items-center">
       <div
@@ -215,8 +157,11 @@
             <li><a href="projects.html">Projects</a></li>
             <li>Maanya Tulips</li>
           </ol>
-        </div>
-      </div>
+          <div class="wrap">
+            <a data-aos="fade-up" data-aos-delay="200" href="#projectdetails"  class="button">Download brochure</a>
+          </div>
+        </div>        
+      </div>      
       <!-- End Breadcrumbs -->
 
       <!-- ======= Projet Details Section ======= -->
@@ -233,19 +178,6 @@
                 <div class="swiper-slide">
                   <img src="assets/img/hero-carousel/maanya_banner_2.jpg" alt="" />
                 </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/projects/tulip-1.JPG" alt="" />
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/projects/tulip-2.JPG" alt="" />
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/projects/tulip-3.JPG" alt="" />
-                </div>
-
               </div>
               <div class="swiper-pagination"></div>
             </div>
@@ -259,7 +191,7 @@
             Launch demo modal
           </button>           -->
 
-          <div class="row justify-content-between gy-4 mt-4">
+          <div class="row justify-content-between gy-4 mt-4" id="projectdetails">
             <div class="col-lg-8">
               <div class="portfolio-description">
                 <h2>
@@ -332,18 +264,38 @@
               </div>
             </div>
 
-            <div class="col-lg-3">
-              <div class="portfolio-info">
-                <h3>Project information</h3>
-                <ul>                  
-                  <a
-                    href="assets/img/samplePDF.pdf"
-                    download
-                    type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                    class="btn-visit align-self-start"
-                    >Download brochure</a
-                  >
-                </ul>
+            <div class="col-lg-4">
+              <div class="portfolio-info">                    
+                <div class="container">
+                  <!-- code here -->
+                  <div class="card">
+                    <div class="card-image">	
+                      <!-- <h2 class="card-heading">
+                        Maanya Tulips
+                        <small>Download brochure</small>
+                      </h2> -->
+                    </div>
+                    <form class="card-form" id="brochure-form">
+                      <div class="input">
+                        <input type="text" class="input-field"  required/>
+                        <label class="input-label">Full name</label>
+                      </div>
+                      <div class="input">
+                        <input type="tel" class="input-field" name="phone" id="phone" pattern="[0-9]{10}" required/>
+                        <label class="input-label">Phone no.</label>
+                      </div>
+                      <div class="input">
+                        <input type="email" name="email"
+                        id="email" class="input-field" required/>
+                        <label class="input-label">Email</label>
+                      </div>                      
+                      <div class="action">
+                        <button class="action-button">Download brochure</button>
+                      </div>
+                    </form>                  
+                  </div>
+                </div>
+                
               </div>
             </div>
           </div>
@@ -351,6 +303,8 @@
       </section>
       <!-- End Projet Details Section -->
     </main>
+
+
     <!-- End #main -->
 
     <!-- ======= Footer ======= -->
