@@ -60,24 +60,23 @@
       })();
     </script>
 
-
     <script>
       // Your download code
       function downloadFiles() {
-          // Create an anchor element
-          var link = document.createElement('a');
-          link.href = 'assets/maanya_tulip.pdf'; // Replace with the path toyour PDF file
-          link.download = 'assets/maanya_tulip.pdf'; // Replace with thedesired file name
-          // Append the anchor to the body
-          document.body.appendChild(link);
-          // Programmatically click the anchor
-          link.click();
-          // Remove the anchor from the document
-          document.body.removeChild(link);
-        }
+        // Create an anchor element
+        var link = document.createElement("a");
+        link.href = "assets/maanya_tulip.pdf"; // Replace with the path toyour PDF file
+        link.download = "assets/maanya_tulip.pdf"; // Replace with thedesired file name
+        // Append the anchor to the body
+        document.body.appendChild(link);
+        // Programmatically click the anchor
+        link.click();
+        // Remove the anchor from the document
+        document.body.removeChild(link);
+      }
 
-        // Execute the downloadFiles function after 5 seconds
-        setTimeout(downloadFiles, 1000);
+      // Execute the downloadFiles function after 5 seconds
+      setTimeout(downloadFiles, 1000);
     </script>
 
     <!-- Meta Pixel Code -->
@@ -131,141 +130,149 @@
 
       gtag("config", "AW-16697902457");
     </script>
+
+    <!-- Event snippet for Thank You Page conversion page -->
+    <script>
+      gtag("event", "conversion", {
+        send_to: "AW-16697902457/VWZ9CMmwpNUZEPmKl5o-",
+      });
+    </script>
   </head>
 
-  <body>   
-    
-    
- <!-- ======= Header ======= -->
- <header id="header" class="header d-flex align-items-center">
-    <div
-      class="container-fluid container-xl d-flex align-items-center justify-content-center"
-    >
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/MAANYA_DEVLOPERS_LOGO.png" alt="" />
-        <!-- <h1>Maanya Ventures & Developers<span>.</span></h1>-->
-      </a>      
-      <!-- .navbar -->
-    </div>
-  </header>
-  <!-- End Header -->
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center">
+      <div
+        class="container-fluid container-xl d-flex align-items-center justify-content-center"
+      >
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <img src="assets/img/MAANYA_DEVLOPERS_LOGO.png" alt="" />
+          <!-- <h1>Maanya Ventures & Developers<span>.</span></h1>-->
+        </a>
+        <!-- .navbar -->
+      </div>
+    </header>
+    <!-- End Header -->
 
-
-  <section id="thanks-section" class="stats-counter section-bg">
-    <div class="container">
-      <div class="row gy-4">
-        <!-- <div class="box">
+    <section id="thanks-section" class="stats-counter section-bg">
+      <div class="container">
+        <div class="row gy-4">
+          <!-- <div class="box">
           <div>Thank You !</div>
           <p>Our team will get back to you soon.</p>
         </div> -->
-        <div class="thankyou-page">
+          <div class="thankyou-page">
             <div class="_header">
-                <div class="logo">
-                    <img src="https://codexcourier.com/images/banner-logo.png" alt="">
-                </div>
-                <h1>Thank You!</h1>
+              <div class="logo">
+                <img
+                  src="https://codexcourier.com/images/banner-logo.png"
+                  alt=""
+                />
+              </div>
+              <h1>Thank You!</h1>
             </div>
             <div class="_body">
-                <div class="_box">
-                    <h2>
-                        Our team will be in touch with you shortly.
-                    </h2>
-                    <p>
-                        Your time and support are greatly valued, and we appreciate you being part of our journey. Thanks for being amazing!
-                    </p>
-                </div>
-            </div>
-            <div class="_footer">            
-                <a class="btn" href="project_maanyaTulips.html">Back to homepage</a>
-            </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<!-- ======= Footer ======= -->
-<footer id="footer" class="footer">
-    <div class="footer-content position-relative">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-md-9">
-            <div class="footer-info">
-              <h3>Maanya Ventures & Developers</h3>
-              <p>
-                #845, 10th Main, 5th Cross, HAL 2nd Stage <br />
-                ndiranagar, Bangalore – 560 038.<br /><br />
-                <strong>Mob:</strong> +91 88808 45621<br />
-                <strong>Tel:</strong> 080 - 2526 9119<br />
-                <strong>Email:</strong> sales@maanyaventures.com<br />
-              </p>
-              <div class="social-links d-flex mt-3">
-                <a
-                  href="https://www.facebook.com/profile.php?id=61559555138668"
-                  class="d-flex align-items-center justify-content-center"
-                  target="_blank"
-                  ><i class="bi bi-facebook"></i
-                ></a>
-                <a
-                  href="https://www.instagram.com/maanyaventures_official/"
-                  class="d-flex align-items-center justify-content-center"
-                  ><i class="bi bi-instagram"></i
-                ></a>
+              <div class="_box">
+                <h2>Our team will be in touch with you shortly.</h2>
+                <p>
+                  Your time and support are greatly valued, and we appreciate
+                  you being part of our journey. Thanks for being amazing!
+                </p>
               </div>
             </div>
+            <div class="_footer">
+              <a class="btn" href="project_maanyaTulips.html"
+                >Back to homepage</a
+              >
+            </div>
           </div>
-          <!-- End footer info column-->
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
-          <!-- End footer links column-->
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><a href="#">Investement Consultency</a></li>
-              <li><a href="#">Plot Visits</a></li>
-              <li><a href="#">Material Walkthrough</a></li>
-              <li><a href="#">Future Value Assesement</a></li>
-              <li><a href="#">Property Assistence</a></li>
-            </ul>
-          </div>
-          <!-- End footer links column-->
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Extended Services</h4>
-            <ul>
-              <li><a href="#">Loan Assistence</a></li>
-              <li><a href="#">Location Selection</a></li>
-              <li><a href="#">Allotements</a></li>
-              <li><a href="#">Registration</a></li>
-              <li><a href="#">Legal Check Assistence</a></li>
-            </ul>
-          </div>
-          <!-- End footer links column-->
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="footer-legal text-center position-relative">
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright
-          <strong><span>Maanya Ventures & Developers</span></strong
-          >. All Rights Reserved
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+      <div class="footer-content position-relative">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-md-9">
+              <div class="footer-info">
+                <h3>Maanya Ventures & Developers</h3>
+                <p>
+                  #845, 10th Main, 5th Cross, HAL 2nd Stage <br />
+                  ndiranagar, Bangalore – 560 038.<br /><br />
+                  <strong>Mob:</strong> +91 88808 45621<br />
+                  <strong>Tel:</strong> 080 - 2526 9119<br />
+                  <strong>Email:</strong> sales@maanyaventures.com<br />
+                </p>
+                <div class="social-links d-flex mt-3">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61559555138668"
+                    class="d-flex align-items-center justify-content-center"
+                    target="_blank"
+                    ><i class="bi bi-facebook"></i
+                  ></a>
+                  <a
+                    href="https://www.instagram.com/maanyaventures_official/"
+                    class="d-flex align-items-center justify-content-center"
+                    ><i class="bi bi-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- End footer info column-->
+
+            <div class="col-lg-2 col-md-3 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <!-- End footer links column-->
+
+            <div class="col-lg-2 col-md-3 footer-links">
+              <h4>Our Services</h4>
+              <ul>
+                <li><a href="#">Investement Consultency</a></li>
+                <li><a href="#">Plot Visits</a></li>
+                <li><a href="#">Material Walkthrough</a></li>
+                <li><a href="#">Future Value Assesement</a></li>
+                <li><a href="#">Property Assistence</a></li>
+              </ul>
+            </div>
+            <!-- End footer links column-->
+
+            <div class="col-lg-2 col-md-3 footer-links">
+              <h4>Extended Services</h4>
+              <ul>
+                <li><a href="#">Loan Assistence</a></li>
+                <li><a href="#">Location Selection</a></li>
+                <li><a href="#">Allotements</a></li>
+                <li><a href="#">Registration</a></li>
+                <li><a href="#">Legal Check Assistence</a></li>
+              </ul>
+            </div>
+            <!-- End footer links column-->
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
-  <!-- End Footer -->
+
+      <div class="footer-legal text-center position-relative">
+        <div class="container">
+          <div class="copyright">
+            &copy; Copyright
+            <strong><span>Maanya Ventures & Developers</span></strong
+            >. All Rights Reserved
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
     <a
       href="#"
       class="scroll-top d-flex align-items-center justify-content-center"
