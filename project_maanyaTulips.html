@@ -8,10 +8,9 @@
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
-
     <!-- Favicons -->
-  <link href="assets/img/maanya-logo.png" rel="icon">
-  <link href="assets/img/maanya-logo.png" rel="apple-touch-icon">
+    <link href="assets/img/maanya-logo.png" rel="icon" />
+    <link href="assets/img/maanya-logo.png" rel="apple-touch-icon" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,6 +45,7 @@
 
     <link href="assets/css/animated_btn.css" rel="stylesheet" />
     <link href="assets/css/download-brochure.css" rel="stylesheet" />
+    <link href="assets/css/marquee.css" rel="stylesheet" />
 
     <!-- =======================================================
   * Template Name: UpConstruction - v1.3.0
@@ -53,30 +53,52 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script type="text/javascript">
-    (function(){
-      emailjs.init("X--WuJSN8HPmRe-GF");
-    })();
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("X--WuJSN8HPmRe-GF");
+      })();
     </script>
-       <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '844946487449916');
-    fbq('track', 'PageView');
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "844946487449916");
+      fbq("track", "PageView");
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=844946487449916&ev=PageView&noscript=1"
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=844946487449916&ev=PageView&noscript=1"
     /></noscript>
-    <!-- End Meta Pixel Code -->  
-     
+    <!-- End Meta Pixel Code -->
+
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -95,26 +117,46 @@
 
   <body>
     <script>
-    
-      window.onload = function() {
-        document.getElementById('brochure-form').addEventListener('submit', function(event) {
-          event.preventDefault();
-          
-          emailjs.sendForm('service_a81spew', 'template_ahgdpai', this)
-            .then(function() {            
-              setTimeout(function() {
-                window.location.href = 'thank-you.html';
-              }, 1000);
-             // console.log('SUCCESS!', response.status, response.text);
-            }, function(error) {
-              console.log('FAILED...', error);
-              alert('Failed to send email. Please try again later.');
-            });
-        });
-      }
-     
+      window.onload = function () {
+        document
+          .getElementById("brochure-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            emailjs.sendForm("service_a81spew", "template_ahgdpai", this).then(
+              function () {
+                setTimeout(function () {
+                  window.location.href = "thank-you.html";
+                }, 1000);
+                // console.log('SUCCESS!', response.status, response.text);
+              },
+              function (error) {
+                console.log("FAILED...", error);
+                alert("Failed to send email. Please try again later.");
+              }
+            );
+          });
+      };
     </script>
-  
+
+    <style>
+      @media only screen and (max-width: 768px) {
+        /* Mobile View */
+        .responsive-img-1 {
+          content: url("assets/img/hero-carousel/maanya_banner_mob1.jpg");
+        }
+        .responsive-img-2 {
+          content: url("assets/img/hero-carousel/maanya_banner_mob2.jpg");
+        }
+        .responsive-img-3 {
+          content: url("assets/img/hero-carousel/maanya_banner_mob3.jpg");
+        }
+        /* .responsive-img:nth-of-type(3) {
+          content: url("assets/img/maanya_banner_mobile_3.jpg");
+        } */
+      }
+    </style>
+
     <!-- ======= Header ======= -->
     <header id="header" class="header d-flex align-items-center">
       <div
@@ -122,7 +164,7 @@
       >
         <!-- <a href="index.html" class="logo d-flex align-items-center"> -->
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/projectsLogo/tulip_logo.svg" alt="" height="75"/>
+        <img src="assets/projectsLogo/tulip_logo.svg" alt="" height="75" />
         <!--  <h1>UpConstruction<span>.</span></h1> -->
         <!-- </a> -->
 
@@ -137,180 +179,517 @@
           </ul>
         </nav>
         <!-- .navbar -->
-      </div>      
+      </div>
     </header>
     <!-- End Header -->
 
     <main id="main">
       <!-- ======= Breadcrumbs ======= -->
       <div
-        class="breadcrumbs d-flex align-items-center"
-        style="background-image: url('assets/img/breadcrumbs-bg.jpg')"
+        class="breadcrumbs d-flex align-items-center p-0"
+        style="
+          background-image: url('assets/img/breadcrum_banner.jpg');
+          height: 200px;
+          min-height: 0;
+        "
       >
         <div
           class="container position-relative d-flex flex-column align-items-center"
           data-aos="fade"
         >
-          <h2>Project Details</h2>
+          <h2 style="font-size: 35px">Project Details</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li>Maanya Tulips</li>
           </ol>
           <div class="wrap">
-            <a data-aos="fade-up" data-aos-delay="200" href="#projectdetails"  class="button">Download brochure</a>
+            <a
+              data-aos="fade-up"
+              data-aos-delay="200"
+              href="#download-brochure"
+              class="button"
+              >Download brochure</a
+            >
           </div>
-        </div>        
-      </div>      
+        </div>
+      </div>
       <!-- End Breadcrumbs -->
 
-      <!-- ======= Projet Details Section ======= -->
+      <!-- ======= swiper image Section start ======= -->
       <section id="project-details" class="project-details">
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="position-relative h-100">
             <div class="slides-1 portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
-
                 <div class="swiper-slide">
-                  <img src="assets/img/hero-carousel/maanya_banner_1.jpg" alt="" />
+                  <img
+                    class="responsive-img-1"
+                    src="assets/img/hero-carousel/maanya_banner_1.jpg"
+                    alt=""
+                  />
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/hero-carousel/maanya_banner_2.jpg" alt="" />
+                  <img
+                    class="responsive-img-2"
+                    src="assets/img/hero-carousel/maanya_banner_2.jpg"
+                    alt=""
+                  />
                 </div>
+
+                <div class="swiper-slide">
+                  <img
+                    class="responsive-img-3"
+                    src="assets/img/hero-carousel/maanya_banner_3.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <!-- <div class="swiper-slide">
+                  <img
+                    class="responsive-img"
+                    src="assets/img/maanya_banner_3.jpg"
+                    alt=""
+                  />
+                </div> -->
               </div>
               <div class="swiper-pagination"></div>
             </div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
           </div>
+        </div>
+      </section>
+      <!-- End swiper image Section -->
 
-          
-
-          <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Launch demo modal
-          </button>           -->
-
-          <div class="row justify-content-between gy-4 mt-4" id="projectdetails">
-            <div class="col-lg-8">
-              <div class="portfolio-description">
-                <h2>
-                  Maanya Tulip: Redefining Luxury Living in Devanahalli
-                  Bangalore's Thriving Real Estate Market
-                </h2>
-                <p>
-                  Imagine waking up to the gentle embrace of nature, surrounded
-                  by lush landscapes and the promise of unparalleled luxury.
-                  Welcome to Maanya Tulips, a residential plotted development
-                  project by Maanya Ventures & Developers in the heart of
-                  Devanahalli, North Bangalore. This exceptional project offers
-                  a lifestyle that transcends the ordinary, with meticulous
-                  attention to detail and a commitment to providing the finest
-                  in luxury living.
-                </p>
-
-                <div>
-                  <img
-                    src="assets/img/maanya_banner_3.jpg"                      
-                    alt=""
-                  />                    
+      <!-- ======= gallery and about section start ======= -->
+      <section style="background: #f5f6f7" id="abount-gallery">
+        <div class="container" data-aos="fade-up">
+          <div class="row gy-4">
+            <div class="col-lg-6">
+              <div>
+                <div class="maanya-heading">
+                  <h3>Maanya Tulip</h3>
                 </div>
-                <p>
-                  As you step into Maanya Tulips, you'll be greeted by a world
-                  of possibilities. Thoughtfully designed with your comfort and
-                  safety in mind, this project boasts top-notch facilities and
-                  essential amenities that cater to your every need. Indulge in
-                  the serenity of beautifully landscaped gardens, where you can
-                  unwind and reconnect with nature. Experience the perfect blend
-                  of brilliant architecture and an equivalent lifestyle that
-                  elevates your living experience to new heights.
+                <p style="font-size: 20px; color: #ffbf00">
+                  Redefining Luxury Living
                 </p>
                 <p>
-                  North Bangalore has emerged as a thriving real estate
-                  destination, as a prospective buyer or investor, now is the
-                  perfect time to explore the opportunities presented by Maanya
-                  Tulips and North Bangalore. With property values expected to
-                  soar in the coming years, investing in this premier
-                  residential project is not just a smart financial decision but
-                  also a chance to elevate your lifestyle and embrace the best
-                  that North Bangalore has to offer. Don't miss out on this
-                  exceptional opportunity to make your dream home a reality in
-                  one of Bangalore's most sought-after locations.
-                  <ul>
-                    <li>Prime location</li>
-                    <li>Rapid development</li>
-                    <li>Luxury Living</li>
-                    <li>Amenities and facility</li>
-                    <li>Investment potetial</li>
-                  </ul>
+                  Maanya Tulips is a residential villa plots project in the
+                  rapidly developing neighborhood of Devanahalli, Bangalore
+                  North.
                 </p>
 
-                <div class="testimonial-item">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    I purchased 3 plots in this exceptional plotted development <b>Maanya Tulip</b> and <b>Maanya Lotus</b>.
-                    The location is perfect, offering serene surroundings and convenient access to amenities.
-                    The sales team was incredibly helpful throughout the entire process, providing detailed information and guidance at every step.
-                    Most impressive thing is the professionalism and transparency demonstrated by <b>Mr. Santhosh Reddy Tadi</b>.
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>                  
-                  <div>
-                    <img
-                      src="assets/img/testimonials/raviranjan.jpeg"
-                      class="testimonial-img"
-                      alt=""
-                    />
-                    <h3>Ravi Ranjan</h3>
-                    <h4>IT Proffetional</h4>
+                <p>
+                  This Premium Villa Plots are located in close proximity to the
+                  Bangalore international Airport, and features the very best in
+                  Maanya’s signature luxury, safety, facilities, and a host of
+                  other essentials packaged with beautiful landscapes all
+                  around.
+                </p>
+
+                <div class="row gy-4">
+                  <div
+                    class="icon-box d-flex position-relative align-items-center col-lg-6 mt-4"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <i
+                      class="bi bi-patch-check flex-shrink-0"
+                      style="margin-right: 12px"
+                    ></i>
+                    <div>
+                      <h4 style="color: #52565e">
+                        <a class="stretched-link" style="color: #52565e"
+                          >BIAAPA Approved</a
+                        >
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div
+                    class="icon-box d-flex position-relative align-items-center col-lg-6 mt-4"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <i
+                      class="bi bi-patch-check flex-shrink-0"
+                      style="margin-right: 12px"
+                    ></i>
+                    <div>
+                      <h4 style="color: #52565e">
+                        <a class="stretched-link" style="color: #52565e"
+                          >RERA Approved</a
+                        >
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div
+                    class="icon-box d-flex position-relative align-items-center col-lg-6 mt-4"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <i
+                      class="bi bi-patch-check flex-shrink-0"
+                      style="margin-right: 12px"
+                    ></i>
+                    <div>
+                      <h4 style="color: #52565e">
+                        <a class="stretched-link" style="color: #52565e"
+                          >Ready for Registration</a
+                        >
+                      </h4>
+                    </div>
+                  </div>
+
+                  <div
+                    class="icon-box d-flex position-relative align-items-center col-lg-6 mt-4"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <i
+                      class="bi bi-patch-check flex-shrink-0"
+                      style="margin-right: 12px"
+                    ></i>
+                    <div>
+                      <h4 style="color: #52565e">
+                        <a class="stretched-link" style="color: #52565e"
+                          >Loans available from Leading Banks</a
+                        >
+                      </h4>
+                    </div>
                   </div>
                 </div>
-
-                <p>
-                  This residential project is located in North Bangalore features the very best in Maanya’s signature luxury, safety, facilities, and a host of other essentials packaged with beautiful landscapes all around. Maanya Tulips is guaranteed to bring a quality living experience to the community of Devanahalli with brilliant architecture and equivalent lifestyle.
-                </p>
               </div>
             </div>
 
-            <div class="col-lg-4">
-              <div class="portfolio-info">                    
-                <div class="container">
-                  <!-- code here -->
-                  <div class="card">
-                    <div class="card-image">	
-                      <!-- <h2 class="card-heading">
-                        Maanya Tulips
-                        <small>Download brochure</small>
-                      </h2> -->
+            <div class="col-lg-6 mb-4">
+              <div class="position-relative h-100">
+                <div class="slides-1 portfolio-details-slider swiper">
+                  <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide">
+                      <img src="assets/img/projects/mt1.jpg" alt="" />
                     </div>
-                    <form class="card-form" id="brochure-form">
-                      <div class="input">
-                        <input type="text" class="input-field"  required/>
-                        <label class="input-label">Full name</label>
-                      </div>
-                      <div class="input">
-                        <input type="tel" class="input-field" name="phone" id="phone" pattern="[0-9]{10}" required/>
-                        <label class="input-label">Phone no.</label>
-                      </div>
-                      <div class="input">
-                        <input type="email" name="email"
-                        id="email" class="input-field" required/>
-                        <label class="input-label">Email</label>
-                      </div>                      
-                      <div class="action">
-                        <button class="action-button">Download brochure</button>
-                      </div>
-                    </form>                  
+
+                    <div class="swiper-slide">
+                      <img src="assets/img/projects/mt2.jpg" alt="" />
+                    </div>
+
+                    <div class="swiper-slide">
+                      <img src="assets/img/projects/mt3.jpg" alt="" />
+                    </div>
+
+                    <div class="swiper-slide">
+                      <img src="assets/img/projects/mt4.jpg" alt="" />
+                    </div>
+
+                    <div class="swiper-slide">
+                      <img src="assets/img/projects/mt5.jpg" alt="" />
+                    </div>
+
+                    <div class="swiper-slide">
+                      <img src="assets/img/projects/mt6.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+                <div class="swiper-button-prev" style="color: #acaeb2"></div>
+                <div class="swiper-button-next" style="color: #acaeb2"></div>
+              </div>
+            </div>
+
+            <div class="marquee">
+              <div>RERA ID: PRM/KA/RERA/1250/303/PR/180424/006786</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End gallery and about section start -->
+
+      <!-- amenities-section start -->
+      <section id="services" class="services">
+        <div class="container" data-aos="fade-up">
+          <div class="section-header">
+            <h2>Amenities</h2>
+            <p>
+              Discover a wide range of premium amenities that enhance your
+              living experience.
+            </p>
+          </div>
+
+          <div class="row gy-4">
+            <!--  Amenities Item -->
+            <div
+              class="col-lg-3 col-sm-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div
+                class="amenities-item position-relative"
+                style="background-color: #f5f6f7"
+              >
+                <div class="icon">
+                  <img
+                    src="assets/img/amenities/security-camera.png"
+                    alt="CCTV Surveillance"
+                  />
+                </div>
+                <h3>CCTV Surveillance</h3>
+              </div>
+            </div>
+            <!-- End Amenities Item -->
+
+            <!--  Amenities Item -->
+            <div
+              class="col-lg-3 col-sm-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div
+                class="amenities-item position-relative"
+                style="background-color: #f5f6f7"
+              >
+                <div class="icon">
+                  <img
+                    src="assets/img/amenities/security-guard.png"
+                    alt="guard"
+                  />
+                </div>
+                <h3>24*7 Security</h3>
+              </div>
+            </div>
+            <!-- End Amenities Item -->
+
+            <!-- Amenities Item -->
+            <div
+              class="col-lg-3 col-sm-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div
+                class="amenities-item position-relative"
+                style="background-color: #f5f6f7"
+              >
+                <div class="icon">
+                  <img src="assets/img/amenities/landscape.png" />
+                </div>
+                <h3>Landscaping</h3>
+              </div>
+            </div>
+            <!-- End Amenities Item -->
+
+            <!--  Amenities Item -->
+            <div
+              class="col-lg-3 col-sm-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div
+                class="amenities-item position-relative"
+                style="background-color: #f5f6f7"
+              >
+                <div class="icon">
+                  <img src="assets/img/amenities/rooftop.png" />
+                </div>
+                <h3>Lounge</h3>
+              </div>
+            </div>
+            <!-- End Amenities Item -->
+
+            <div
+              class="col-lg-3 col-sm-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div
+                class="amenities-item position-relative"
+                style="background-color: #f5f6f7"
+              >
+                <div class="icon">
+                  <img src="assets/img/amenities/gazebo.png" />
+                </div>
+                <h3>Gazebo with walking track</h3>
+              </div>
+            </div>
+            <!-- End Amenities Item -->
+
+            <div
+              class="col-lg-3 col-sm-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div
+                class="amenities-item position-relative"
+                style="background-color: #f5f6f7"
+              >
+                <div class="icon">
+                  <img src="assets/img/amenities/play-court.png" />
+                </div>
+                <h3>Multi-Purpose Playcourt</h3>
+              </div>
+            </div>
+            <!-- End Amenities Item -->
+
+            <div
+              class="col-lg-3 col-sm-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div
+                class="amenities-item position-relative"
+                style="background-color: #f5f6f7"
+              >
+                <div class="icon">
+                  <img src="assets/img/amenities/indoor-games.png" />
+                </div>
+                <h3>Indoor Games Room</h3>
+              </div>
+            </div>
+            <!-- End Amenities Item -->
+
+            <div
+              class="col-lg-3 col-sm-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div
+                class="amenities-item position-relative"
+                style="background-color: #f5f6f7"
+              >
+                <div class="icon">
+                  <img src="assets/img/amenities/hills-view.png" />
+                </div>
+                <h3>Hillside View</h3>
+              </div>
+            </div>
+            <!-- End Amenities Item -->
+
+            <div
+              class="col-lg-3 col-sm-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div
+                class="amenities-item position-relative"
+                style="background-color: #f5f6f7"
+              >
+                <div class="icon">
+                  <img src="assets/img/amenities/cricket-play.png" />
+                </div>
+                <h3>Cricket Practice net Pitch</h3>
+              </div>
+            </div>
+            <!-- End Amenities Item -->
+
+            <div
+              class="col-lg-3 col-sm-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div
+                class="amenities-item position-relative"
+                style="background-color: #f5f6f7"
+              >
+                <div class="icon">
+                  <img src="assets/img/amenities/conf-room.png" />
+                </div>
+                <h3>Conference Hall</h3>
+              </div>
+            </div>
+            <!-- End Amenities Item -->
+
+            <div
+              class="col-lg-3 col-sm-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div
+                class="amenities-item position-relative"
+                style="background-color: #f5f6f7"
+              >
+                <div class="icon">
+                  <img src="assets/img/amenities/play-court.png" />
+                </div>
+                <h3>Children's Play Area</h3>
+              </div>
+            </div>
+            <!-- End Amenities Item -->
+
+            <div
+              class="col-lg-3 col-sm-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div
+                class="amenities-item position-relative"
+                style="background-color: #f5f6f7"
+              >
+                <div class="icon">
+                  <img src="assets/img/amenities/running.png" />
+                </div>
+                <h3>Jogging Area</h3>
+              </div>
+            </div>
+            <!-- End Amenities Item -->
+          </div>
+        </div>
+      </section>
+      <!-- amenities-section end -->
+
+      <section style="background: #f5f6f7" id="download-brochure">
+        <div class="portfolio-info">
+          <div class="container" id="projectdetails">
+            <!-- code here -->
+            <div class="card">
+              <div class="row gy-4">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                  <div class="card-image">
+                    <!-- <h2 class="card-heading">
+                  Maanya Tulips
+                  <small>Download brochure</small>
+                </h2> -->
                   </div>
                 </div>
-                
+                <div class="col-lg-6">
+                  <form class="card-form" id="brochure-form">
+                    <div class="input">
+                      <input type="text" class="input-field" required />
+                      <label class="input-label">Full name</label>
+                    </div>
+                    <div class="input">
+                      <input
+                        type="tel"
+                        class="input-field"
+                        name="phone"
+                        id="phone"
+                        pattern="[0-9]{10}"
+                        required
+                      />
+                      <label class="input-label">Phone no.</label>
+                    </div>
+                    <div class="input">
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        class="input-field"
+                        required
+                      />
+                      <label class="input-label">Email</label>
+                    </div>
+                    <div class="action" id="projectdetails">
+                      <button class="action-button">Download brochure</button>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- End Projet Details Section -->
     </main>
-
 
     <!-- End #main -->
 
@@ -329,7 +708,7 @@
                   <strong>Tel:</strong> 080 - 2526 9119<br />
                   <strong>Email:</strong> sales@maanyaventures.com<br />
                 </p>
-                <div class="social-links d-flex mt-3">                  
+                <div class="social-links d-flex mt-3">
                   <a
                     href="https://www.facebook.com/profile.php?id=61559555138668"
                     class="d-flex align-items-center justify-content-center"
@@ -340,7 +719,7 @@
                     href="https://www.instagram.com/maanyaventures_official/"
                     class="d-flex align-items-center justify-content-center"
                     ><i class="bi bi-instagram"></i
-                  ></a>                  
+                  ></a>
                 </div>
               </div>
             </div>
@@ -392,7 +771,6 @@
             <strong><span>Maanya Ventures & Developers</span></strong
             >. All Rights Reserved
           </div>
-          
         </div>
       </div>
     </footer>
