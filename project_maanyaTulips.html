@@ -125,9 +125,7 @@
 
             emailjs.sendForm("service_a81spew", "template_ahgdpai", this).then(
               function () {
-                setTimeout(function () {
-                  window.location.href = "thank-you.html";
-                }, 1000);
+                window.location.href = "thank-you.html";
                 // console.log('SUCCESS!', response.status, response.text);
               },
               function (error) {
