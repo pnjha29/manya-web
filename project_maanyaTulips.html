@@ -117,24 +117,59 @@
 
   <body>
     <script>
-      window.onload = function () {
-        document
-          .getElementById("brochure-form")
-          .addEventListener("submit", function (event) {
-            event.preventDefault();
+      window.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("brochure-form");
+        const submitButton = form.querySelector(".action-button");
+        let isSubmitting = false;
+    
+        function handleSubmit(event) {
+          event.preventDefault();
 
-            emailjs.sendForm("service_a81spew", "template_ahgdpai", this).then(
-              function () {
-                window.location.href = "thank-you.html";
-                // console.log('SUCCESS!', response.status, response.text);
-              },
-              function (error) {
-                console.log("FAILED...", error);
-                alert("Failed to send email. Please try again later.");
-              }
-            );
-          });
-      };
+          // Disable and visually lock button
+          submitButton.disabled = true;
+          submitButton.style.opacity = "0.6";
+          submitButton.style.pointerEvents = "none";
+          submitButton.innerHTML = '<span class="spinner"></span> Sending...';
+    
+          // Extra protection: remove all event listeners (no further triggers)
+          form.onsubmit = null;
+          submitButton.onclick = null;
+
+          // If already submitting, stop immediately (blocks second request)
+          if (isSubmitting) {
+            console.warn("Duplicate submission blocked.");
+            return false;
+          }
+    
+          // Set flag immediately before any async operation
+          isSubmitting = true;
+    
+          // Send email once
+          emailjs.sendForm("service_a81spew", "template_ahgdpai", form).then(
+            function () {
+              // Success → redirect
+              window.location.href = "thank-you.html";
+            },
+            function (error) {
+              // If fail → re-enable button
+              console.log("FAILED...", error);
+              alert("Failed to send email. Please try again later.");
+    
+              isSubmitting = false;
+              submitButton.disabled = false;
+              submitButton.style.opacity = "1";
+              submitButton.style.pointerEvents = "auto";
+              submitButton.textContent = "Send";
+            }
+          );
+    
+          return false;
+        }
+    
+        // Attach only once
+        form.addEventListener("submit", handleSubmit, { once: true });
+        submitButton.addEventListener("click", handleSubmit, { once: true });
+      });
     </script>
 
     <style>
